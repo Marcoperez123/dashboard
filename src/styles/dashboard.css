@@ -1,0 +1,109 @@
+/* src/styles/dashboard.css */
+
+.dashboard-container {
+    padding: 1.5rem;
+    background-color: #b0bee5;
+    min-height: 100vh;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;  /* ← centra el dashboard */
+  }
+  
+  .dashboard-title {
+    font-size: 1.875rem; /* text-3xl */
+    font-weight: 700;     /* font-bold */
+    color: #1f2937;       /* Tailwind's gray-800 */
+    margin-bottom: 1.5rem;
+  }
+  
+  .summary-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-bottom: 2.5rem;
+  }
+  
+  .summary-card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+  
+  .summary-card h3 {
+    color: #6b7280; /* gray-500 */
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  .summary-card p {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2563eb; /* blue-600 */
+  }
+  
+  .charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* ← tamaño mínimo de cada box */
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .chart-box {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    min-height: 350px;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    overflow: hidden;
+  }
+  
+  .table-box {
+    background-color: #b3c8b1;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+  }
+  
+  .table-box table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #1f2937; /* Tailwind gray-800 */
+    font-size: 0.95rem;
+  }
+  
+  .table-box thead {
+    background-color: #f9fafb; /* gris clarito */
+    color: #111827;            /* texto oscuro */
+    font-weight: bold;
+  }
+  
+  .table-box th, .table-box td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e5e7eb; /* Tailwind gray-200 */
+  }
+  
+  .table-box tbody tr:hover {
+    background-color: #f3f4f6; /* Hover clarito */
+  }
+  
+  .table-box .text-danger {
+    color: #dc2626; /* rojo para deudas */
+    font-weight: bold;
+  }
+  .chart-box h3 {
+  font-size: 1.125rem;         /* text-lg */
+  font-weight: 600;            /* semibold */
+  margin-bottom: 1rem;
+  color: #1f2937;              /* Tailwind gray-800 */
+  text-align: center;
+}
