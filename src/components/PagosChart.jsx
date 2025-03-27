@@ -21,12 +21,12 @@ const PagosChart = () => {
     axios.get("http://localhost:3001/pagos-por-mes")
       .then(response => {
         const nombreMes = (num) => {
-            const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
-                           "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
-            return meses[num - 1]; // porque los índices van de 0 a 11
-          };
-          
-          const meses = response.data.map(item => nombreMes(item.Mes));
+          const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
+            "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+          return meses[num - 1]; // porque los índices van de 0 a 11
+        };
+
+        const meses = response.data.map(item => nombreMes(item.Mes));
         const pagos = response.data.map(item => parseFloat(item.total_pagado));
         setLabels(meses);
         setDataPagos(pagos);
@@ -48,7 +48,7 @@ const PagosChart = () => {
   };
 
   return (
-    <div style={{ maxWidth: "700px", marginTop: "2rem" }}>
+    <div style={{ width: "70%", marginTop: "2rem" }}>
       <h3>Pagos por Mes</h3>
       <Bar data={data} />
     </div>

@@ -6,7 +6,7 @@
   min-height: 100vh;
   max-width: 100%;
   margin: 0 auto;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   color: #cccccc;
   /* color5 */
 }
@@ -63,12 +63,12 @@
   /* color3 */
 }
 
-/* Gráficos */
-.charts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+/* Nuevo sistema de filas para gráficos */
+.charts-row {
+  display: flex;
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
 .chart-box {
@@ -77,12 +77,24 @@
   border-radius: 1rem;
   padding: 1.5rem;
   min-height: 360px;
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.05);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, border 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.chart-small {
+  flex: 0.4;
+  /* Más pequeño para la gráfica de pastel */
+}
+
+.chart-large {
+  flex: 0.6;
+  /* Más grande para la otra gráfica */
 }
 
 .chart-box:hover {
@@ -100,6 +112,19 @@
   margin-bottom: 1rem;
 }
 
+/* Responsive para las filas de gráficos */
+@media (max-width: 1024px) {
+  .charts-row {
+    flex-direction: column;
+  }
+
+  .chart-small,
+  .chart-large {
+    flex: 1;
+    width: 100%;
+  }
+}
+
 /* Tabla de deudores */
 .table-box {
   background-color: #292c37;
@@ -108,6 +133,7 @@
   padding: 2rem;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   overflow-x: auto;
+  margin-top: 2rem;
 }
 
 .table-box table {

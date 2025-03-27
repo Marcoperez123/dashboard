@@ -23,7 +23,7 @@ const PrestamosVsPagosChart = () => {
       .then(response => {
         const nombreMes = (num) => {
           const meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio",
-                         "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+            "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
           return meses[num - 1];
         };
 
@@ -55,7 +55,7 @@ const PrestamosVsPagosChart = () => {
   };
 
   return (
-    <div style={{ maxWidth: "800px", marginTop: "2rem" }}>
+    <div style={{ width: "70%", marginTop: "2rem" }}>
       <h3>Préstamos vs Pagos por Mes</h3>
       <Bar data={data} />
     </div>
