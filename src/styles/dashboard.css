@@ -1,24 +1,23 @@
 /* Dashboard general */
 .dashboard-container {
   padding: 2rem;
-  background-color: #000000;
-  /* color1 */
+  background-color: #e8ecf3;
+  /* Fondo más oscuro para mayor contraste */
   min-height: 100vh;
   max-width: 100%;
   margin: 0 auto;
   font-family: "Inter", sans-serif;
-  color: #cccccc;
-  /* color5 */
+  color: #2d3748;
+  /* Texto oscuro para contraste */
 }
 
 .dashboard-title {
   font-size: 2.25rem;
   font-weight: 800;
-  color: #9f111b;
-  /* color2 */
+  color: #2d3748;
+  /* Color oscuro para el título */
   margin-bottom: 2rem;
   text-align: center;
-  text-shadow: 2px 2px 4px #000;
 }
 
 /* KPIs */
@@ -30,40 +29,67 @@
 }
 
 .summary-card {
-  background-color: #292c37;
-  /* color4 */
+  background-color: white;
   border-radius: 1rem;
   padding: 1.5rem;
   text-align: center;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
-  border: 1px solid #9f111b;
-  /* color2 */
+  border: 1px solid #e2e8f0;
+  position: relative;
+  overflow: hidden;
+}
+
+.summary-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #38b2ac;
+  /* Barra lateral turquesa */
+}
+
+.summary-card:nth-child(2)::before {
+  background-color: #4299e1;
+  /* Azul */
+}
+
+.summary-card:nth-child(3)::before {
+  background-color: #805ad5;
+  /* Morado */
+}
+
+.summary-card:nth-child(4)::before {
+  background-color: #38a169;
+  /* Verde */
 }
 
 .summary-card:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 15px 30px rgba(255, 255, 255, 0.1);
-  border-color: #b11623;
-  /* color3 */
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .summary-card h3 {
-  color: #cccccc;
-  /* color5 */
-  font-size: 1rem;
+  color: #718096;
+  /* Gris para subtítulos */
+  font-size: 0.875rem;
   font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
 }
 
 .summary-card p {
   margin-top: 0.5rem;
   font-size: 1.75rem;
   font-weight: 700;
-  color: #b11623;
-  /* color3 */
+  color: #2d3748;
+  /* Color oscuro para valores */
 }
 
-/* Nuevo sistema de filas para gráficos */
+/* Nuevo sistema de filas para gráficos - Manteniendo la estructura original */
 .charts-row {
   display: flex;
   gap: 2rem;
@@ -72,8 +98,7 @@
 }
 
 .chart-box {
-  background-color: #292c37;
-  /* color4 */
+  background-color: white;
   border-radius: 1rem;
   padding: 1.5rem;
   min-height: 360px;
@@ -81,10 +106,11 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  /* Manteniendo el valor original */
   align-items: center;
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, border 0.3s ease;
-  border: 1px solid transparent;
+  border: 1px solid #e2e8f0;
 }
 
 .chart-small {
@@ -99,15 +125,15 @@
 
 .chart-box:hover {
   transform: scale(1.02);
-  border: 1px solid #b11623;
-  /* color3 */
+  border: 1px solid #38b2ac;
+  /* Borde turquesa al hacer hover */
 }
 
 .chart-box h3 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #cccccc;
-  /* color5 */
+  color: #4a5568;
+  /* Gris oscuro para títulos */
   text-align: center;
   margin-bottom: 1rem;
 }
@@ -127,27 +153,25 @@
 
 /* Tabla de deudores */
 .table-box {
-  background-color: #292c37;
-  /* color4 */
+  background-color: white;
   border-radius: 1rem;
   padding: 2rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow-x: auto;
   margin-top: 2rem;
+  border: 1px solid #e2e8f0;
 }
 
 .table-box table {
   width: 100%;
   border-collapse: collapse;
   font-size: 1rem;
-  color: #f4ede8;
-  /* texto crema claro */
+  color: #4a5568;
 }
 
 .table-box thead {
-  background-color: #1a1c2c;
-  /* muy oscuro */
-  color: #55514d;
+  background-color: #f7fafc;
+  color: #4a5568;
   font-weight: 700;
   text-transform: uppercase;
   font-size: 0.9rem;
@@ -158,28 +182,36 @@
 .table-box td {
   padding: 0.9rem 1.2rem;
   text-align: left;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .table-box tbody tr {
-  background-color: #363946;
-  /* gris oscuro elegante */
+  background-color: white;
   transition: background-color 0.3s ease;
 }
 
 .table-box tbody tr:hover {
-  background-color: #4b1036;
-  /* color2: vino profundo */
+  background-color: #f7fafc;
 }
 
 .table-box tbody td:first-child {
-  color: #ffffff;
-  /* blanco para nombres */
+  color: #2d3748;
   font-weight: 600;
 }
 
 .table-box .text-danger {
-  color: #e11d48;
-  /* rojo brillante más contrastante */
+  color: #e53e3e;
   font-weight: 700;
+}
+
+/* Variables de colores para gráficas */
+:root {
+  --chart-turquoise: #38b2ac;
+  --chart-blue: #4299e1;
+  --chart-purple: #805ad5;
+  --chart-green: #38a169;
+  --chart-teal: #319795;
+  --chart-cyan: #0bc5ea;
+  --chart-indigo: #667eea;
+  --chart-pink: #ed64a6;
 }
