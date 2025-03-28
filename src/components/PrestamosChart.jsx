@@ -45,7 +45,7 @@ const PrestamosChart = () => {
   };
 
   return (
-    <div style={{ maxWidth: "600px", marginTop: "2rem" }}>
+    <div style={{ width: "55%", marginTop: "2rem" }}>
       <h3>Préstamos por Tipo</h3>
       <Pie data={data} />
     </div>

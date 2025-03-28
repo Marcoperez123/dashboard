@@ -52,7 +52,7 @@ const PrestamosPorAnioChart = () => {
   };
 
   return (
-    <div style={{ width: "70%", marginTop: "2rem" }}>
+    <div style={{ width: "85%", marginTop: "2rem" }}>
       <h3>Préstamos por Año</h3>
       <Line data={data} />
     </div>

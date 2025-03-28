@@ -48,7 +48,7 @@ const PrestamosTipoSucursalChart = () => {
   if (!dataChart) return <p>Cargando...</p>;
 
   return (
-    <div style={{ width: "70%", marginTop: "2rem" }}>
+    <div style={{ width: "75%", marginTop: "2rem" }}>
       <h3>Préstamos por Tipo y Sucursal</h3>
       <Bar data={dataChart} />
     </div>

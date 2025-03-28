@@ -48,7 +48,7 @@ const PagosChart = () => {
   };
 
   return (
-    <div style={{ width: "70%", marginTop: "2rem" }}>
+    <div style={{ width: "85%", marginTop: "2rem" }}>
       <h3>Pagos por Mes</h3>
       <Bar data={data} />
     </div>

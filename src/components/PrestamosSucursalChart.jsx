@@ -42,7 +42,7 @@ const PrestamosSucursalChart = () => {
   };
 
   return (
-    <div style={{ width: "70%", marginTop: "2rem" }}>
+    <div style={{ width: "85%", marginTop: "2rem" }}>
       <h3>Préstamos por Sucursal</h3>
       <Bar data={data} />
     </div>
